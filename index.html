@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+        
+        <title>Pig Dice Game</title>
+    </head>
+    <body>
+        <!------------Wrapper------------>
+        <div class="wrapper clearfix">
+            <!------------First panel------------>
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            <!------------Second panel------------>
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            <!------------Buttons and Input------------>
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <div class="rules"><a href="#" class="btn">Rules</a></div>
+            <input type="text" placeholder="Final score" class="final-score">
+            <!------------Images------------>
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+            <!------------Footer------------>
+            <footer class="footer">
+                <p class="footer-paragraph">
+                    Copyright &copy; Pig Dice Game. Development Gérard Colombi
+                </p>
+            </footer>
+        </div>
+        <!------------Popup Rules------------>
+        <div class="popup" id="popup">
+            <div class="popup-content" id="popup-content-alert">
+                <div class="popup-rules">
+                    <a href="#" class="popup-close">&times;</a>
+                    <h2 class="heading-popup--1">Game rules</h2>
+                    <h3 class="heading-popup--2">Please read this before beginning</h3>
+                    <ul class="popup-text">
+                        <li>The game has 2 players, playing in rounds.</li>
+                        <li>In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND score.</li>
+                        <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the opponent's turn.</li>
+                        <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the opponent's turn.</li>
+                        <li>The first player to reach 100 points on GLOBAL score wins the game.</li>
+                        <li>You can change the predefine score of 100 to the final score you desire at the bottom of the game.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!------------Popup Alert------------>
+        <div class="pop-alert" id="pop-alert">
+            <div class="alert-content" id="alert-content">
+                <div class="alert">
+                    <p class="paragraph">You roll a 1, best luck next time!</p>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
